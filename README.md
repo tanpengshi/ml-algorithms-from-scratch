@@ -115,152 +115,26 @@ This repository contains clean, well-documented implementations of essential mac
 
 ## 📁 Repository Structure
 
-```
 ML_Algorithms/
 │
 ├── logistic-regression/
-│   ├── logistic_regression.py      # Core implementation
-│   └── logistic_regression.ipynb    # Example usage and evaluation
+│ ├── logistic_regression.py # Core implementation
+│ └── logistic_regression.ipynb # Example usage and evaluation
 │
 ├── decision-tree/
-│   └── decision_tree.py             # Decision tree classifier
+│ └── decision_tree.py # Decision tree classifier
 │
 ├── random-forest/
-│   └── random_forest.py             # Random forest ensemble
+│ └── random_forest.py # Random forest ensemble
 │
 ├── multi-layer-perceptron/
-│   ├── neural_network_2_layers.py  # 2-layer MLP implementation
-│   ├── neural_network_N_layers.py  # N-layer MLP framework
-│   ├── neural_networks_2_layers.ipynb
-│   └── neural_networks_N_layers.ipynb
+│ ├── neural_network_2_layers.py # 2-layer MLP implementation
+│ ├── neural_network_N_layers.py # N-layer MLP framework
+│ ├── neural_networks_2_layers.ipynb
+│ └── neural_networks_N_layers.ipynb
 │
 ├── hidden-markov-model/
-│   └── hidden_markov_model.ipynb   # HMM for NER task
+│ └── hidden_markov_model.ipynb # HMM for NER task
 │
-└── README.md                        # This file
-```
+└── README.md # This file
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-```bash
-pip install numpy pandas scikit-learn matplotlib jupyter
-```
-
-For Hidden Markov Model:
-```bash
-pip install nltk
-```
-
-### Basic Usage Examples
-
-#### Logistic Regression
-```python
-from logistic_regression.logistic_regression import Logistic_Regression
-
-# Initialize model
-model = Logistic_Regression(iterations=10000, learning_rate=0.00001)
-
-# Train
-model.fit(X_train, y_train)
-
-# Predict
-predictions = model.predict(X_test)
-```
-
-#### Decision Tree
-```python
-from decision_tree.decision_tree import DecisionTree
-
-# Initialize with max depth
-model = DecisionTree(max_depth=10, random_state=42)
-
-# Train and predict
-model.fit(X_train, y_train)
-predictions = model.predict(X_test)
-```
-
-#### Random Forest
-```python
-from random_forest.random_forest import RandomForest
-
-# Initialize with 100 trees
-model = RandomForest(num_trees=100, max_depth=10, random_state=42)
-
-# Train and predict
-model.fit(X_train, y_train)
-predictions = model.predict(X_test)
-```
-
-#### Multi-Layer Perceptron (N-Layer)
-```python
-from neural_network_N_layers import Model, Layer
-
-# Define architecture
-layers = [
-    Layer(units=128, input_units=784, activation='relu'),
-    Layer(units=64, activation='relu'),
-    Layer(units=10, activation='softmax')
-]
-
-# Create and train model
-model = Model(layers, random_state=42)
-model.fit(X_train, y_train, 
-          validation_data=(X_val, y_val),
-          epochs=100,
-          learning_rate=0.001,
-          patience=10)
-```
-
-## 🎓 Educational Value
-
-This repository is designed for:
-- **Students** learning machine learning fundamentals
-- **Practitioners** wanting to understand algorithm internals
-- **Researchers** needing baseline implementations
-- **Anyone** curious about how ML algorithms actually work
-
-Each implementation includes:
-- Clear mathematical foundations
-- Detailed code comments
-- Intuitive explanations
-- Practical usage examples
-
-## 🔬 Key Learning Outcomes
-
-By studying these implementations, you'll understand:
-- How gradient descent optimizes model parameters
-- The mechanics of backpropagation in neural networks
-- How decision trees select optimal splits
-- Ensemble methods and their benefits
-- Probabilistic models for sequence data
-- The importance of regularization and early stopping
-
-## 📝 Notes
-
-- All implementations use NumPy for numerical computations
-- Code is optimized for clarity over performance (though still efficient)
-- Jupyter notebooks provide interactive examples and visualizations
-- Some algorithms include comparisons with scikit-learn implementations
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-- Add new algorithms
-- Improve existing implementations
-- Fix bugs or optimize code
-- Enhance documentation
-- Add more examples
-
-## 📄 License
-
-This project is open source and available for educational purposes.
-
-## 👤 Author
-
-**Tan Pengshi Alvin**
-
----
-
-*"Understanding the fundamentals is the key to mastering any field. These implementations strip away the abstractions to reveal the beautiful mathematics and algorithms that power modern machine learning."*
