@@ -50,9 +50,9 @@ class MLP_Two_Layers:
 
         np.random.seed(random_state) 
         
-        W1 = np.random.randn(n_h,n_x) * 0.01  # apply He Initialization
+        W1 = np.random.randn(n_h,n_x) * 0.01  # random initialization
         b1 = np.zeros((n_h,1))
-        W2 = np.random.randn(n_y,n_h) * 0.01  # apply He Initialization
+        W2 = np.random.randn(n_y,n_h) * 0.01  # random initialization
         b2 = np.zeros((n_y,1))
 
         self.parameters = {"W1": W1,
